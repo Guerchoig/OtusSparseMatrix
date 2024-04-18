@@ -22,16 +22,23 @@ int main()
 
     for (auto i = matrix.begin(); i != matrix.end(); ++i)
     {
+        std::cout << '(';
         for (auto j = 0; j < 2; ++j)
-            std::cout << i->first[j] << (j != 1 ? "," : " ");
+            std::cout << i->first[j] << (j != 1 ? "," : ") -> ");
         std::cout << i->second << '\n';
     }
 
-    // D3M d;
-    // d(0, 0, 0) = 75;
-    // int i = d(0, 0, 0);
-    // (void)i;
-    // d(0, 0, 0) = D3M::emp;
+    // // 5 dimensional
+    // std::cout << '\n'
+    //           << "5 dimensional" << '\n';
+    // using D5m = DNmatr<5, int, -1>;
+    // D5m d;
+    // d(0, 0, 0, 0, 0) = 75;
+    // std::cout << "d(0, 0, 0, 0, 0): " << d(0, 0, 0, 0, 0) << '\n';
+    // int i = d(0, 0, 0, 0, 0);
+    // std::cout << "i: " << i << '\n';
+    // d(0, 0, 0, 0, 0) = D2m::emp;
+    // std::cout << "empty d(0, 0, 0, 0, 0): " << d(0, 0, 0, 0, 0) << '\n';
 
     return 0;
 }
